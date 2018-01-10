@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>俄罗斯方块 — 经典版</title>
+        <style>
+            .playground  {
+                width: 525px;
+                height: 550px;
+                margin: 20px auto 0 auto;
+                position: relative;
+            }
+            .playground img  {
+                position: absolute;
+            }
+            .playground p  {
+                font-size: 30px;
+                font-family: 'SimHei';
+                font-weight: bold;
+                color: #667799;
+                position: absolute;
+            }
+        </style>
+        <script>
+            //OOP知识点复习
+            function P() {
+                this.age = 55;
+                this.f = function () {
+                    console.log(this.age);
+                }
+            }
+            function C() {
+                Object.setPrototypeOf(this, new P());
+                this.age = 33;
+                this.f2 = function () {
+                    console.log('Child:' + this.age);
+                }
+            }
+            var c = new C();
+            c.f2();
+            c.f();
+        </script>
+    </head>
+    <body>
+        <div class="playground">
+        </div>
+        <script src="tetris.js"></script>        
+    </body>
+</html>
